@@ -19,7 +19,7 @@ FROM nginx
 #COPY --from=builder /app/build /usr/share/nginx/html
 
 # uncomment below for AWS deployment
-#EXPOSE 80
+EXPOSE 80
 COPY --from=0 /app/build /usr/share/nginx/html
 
 # nginx container already includes RUN command
